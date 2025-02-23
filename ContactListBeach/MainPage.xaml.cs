@@ -41,12 +41,13 @@ namespace ContactListBeach
                 new Contact(){Name="Ella",ImageName="abby.png",Email="Ella.Adler37@gmail.com",PhoneNum="(513)757-6760",Description="Coworker"},
             }));
 
+            LvContacts.ItemsSource = Groups;
         }
 
         private void Contact_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedContact = e.CurrentSelection.FirstOrDefault() as Contact;
-            if (selectedContact != null) return;
+            if (selectedContact == null) return;
             Navigation.PushAsync(new ContactDetails(selectedContact));
             ((CollectionView)sender).SelectedItem = null;
         }
