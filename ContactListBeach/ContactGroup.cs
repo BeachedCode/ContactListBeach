@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace ContactListBeach
 {
-    public class ContactGroup
+    public class ContactGroup : List<Contact>
     {
+        public string GroupName { get; set; }
 
+        public ContactGroup(string name, List<Contact> contacts) : base(contacts)
+        {
+            GroupName = name;
+        }
     }
 }
