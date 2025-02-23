@@ -18,7 +18,9 @@
             Text="Return"
             FontSize="Medium"
             FontAttributes="Bold"
-            Clicked="ReturnClicked">
+            Clicked="ReturnClicked"
+            TextColor="Black"
+            BackgroundColor="LightGray">
         </Button>
     </Grid>
 </ContentPage>
